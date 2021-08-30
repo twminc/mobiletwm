@@ -2,6 +2,8 @@ package com.mobiletwm;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
+
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -45,6 +47,13 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
+
+    String str = getFilesDir().getAbsolutePath()+"/testWallet";
+
+    int res = NativeModule.createWallet(str);
+
+    Log.d("TWM", "res is "+res);
+
   }
 
   /**
