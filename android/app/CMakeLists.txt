@@ -14,21 +14,21 @@ include_directories(
 )
 
 file(GLOB BOOST_LIBS
-        "/home/igor/workarea/mobiletwm/android/cpp-code/libboost*.a"
+        "${CMAKE_SOURCE_DIR}/../cpp-code/libboost*.a"
         )
 
 
 target_link_libraries( cpp-code
-        /home/igor/workarea/mobiletwm/android/cpp-code/libwallet_merged.a
-        /home/igor/workarea/mobiletwm/android/cpp-code/libepee.a
-        /home/igor/workarea/mobiletwm/android/cpp-code/libeasylogging.a
-        /home/igor/workarea/mobiletwm/android/cpp-code/libssl.a
-        /home/igor/workarea/mobiletwm/android/cpp-code/libcrypto.a
-        /home/igor/workarea/mobiletwm/android/cpp-code/liblmdb.a
-        /home/igor/workarea/mobiletwm/android/cpp-code/libunbound.a
-        /home/igor/workarea/mobiletwm/android/cpp-code/libpcsclite.a
-        /home/igor/workarea/mobiletwm/android/cpp-code/librandomx.a
-        /home/igor/workarea/mobiletwm/android/cpp-code/libblocks.a
-        /home/igor/workarea/mobiletwm/android/cpp-code/libblockchain_db.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/libwallet_merged.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/libepee.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/libeasylogging.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/libssl.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/libcrypto.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/liblmdb.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/libunbound.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/libpcsclite.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/librandomx.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/libblocks.a
+        ${CMAKE_SOURCE_DIR}/../cpp-code/libblockchain_db.a
         log
         ${BOOST_LIBS})
