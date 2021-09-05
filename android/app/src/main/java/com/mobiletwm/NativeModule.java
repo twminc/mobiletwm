@@ -17,4 +17,7 @@ public class NativeModule {
 
 
     public static native int createWallet(String str);
+    //for ever cpp function create the same one here to be called
+    //then in this native module all functions that can be called from react native
+
 }
